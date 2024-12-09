@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #2A2A2A;
   color: #E0E0E0;
+  height: 100%;
 }
 
 .title {
@@ -38,6 +39,7 @@ p {
   max-width: 68em;
   margin: 0 auto;
   padding: 0 2.5em;
+  place-items: center;
 }
 
 @media screen and (max-width: 736px) {
@@ -48,10 +50,14 @@ p {
 
 }
 
+/* About Me ---------------------------------------------------------------------------------- */
+.about-me p {
+  padding: 20px;
+  font-size: 18px;
+}
+
 /* Projects ---------------------------------------------------------------------------------- */
 .projects {
-  margin-top: 20px;
-  width: 100%;
   place-items: center;
 }
 
@@ -59,27 +65,21 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 0 2.5em;
   width: 90%;
   align-items: center;
 }
 
 .grid-item {
   background-color: #444444;
-  border: 5px solid #D989AE;
-  border-radius: 10px;
-  padding: 15px;
+  border: 7px solid #D989AE;
+  border-radius: 6px;
   text-align: left;
   transition: transform 0.2s;
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
-}
-
-.grid-item p {
-  margin-left: 2.5%;
-  text-align: left;
-  font-size: large;
+  display: flex;
+  position: relative;
 }
 
 .grid-item a {
@@ -87,37 +87,49 @@ p {
   color: #E0E0E0;
 }
 
+.grid-item p {
+  text-align: left;
+  font-size: large;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .grid-item h2 {
   text-decoration: none;
   color: #D989AE;
   text-align: left;
-  margin-left: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .image-container {
   width: 100%;
   height: 0;
-  padding-bottom: 75%;
-  /* Aspect ratio 4:3 (can be adjusted) */
-  position: relative;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  padding-bottom: 50%; /* 2:1 Aspect Ratio is best for look */
   overflow: hidden;
 }
 
 .image-container img {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: auto;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .grid-item:hover {
-  transform: scale(1.05);
-  /* Slight scaling effect on hover */
+  border: 7px solid #c45d8d;
 }
 /* ------------------------------------------------------------------------------- */
+
+.content {
+  flex: 1;
+}
 
 .footer {
   text-align: center;
@@ -132,8 +144,10 @@ p {
 /* Might eventually make this like a branch or smthn */
 .separator {
   height: 2px;
-  background-color: rgb(107, 79, 79, 0.7);
-  margin-bottom: 20px;
+  width: 50%;
+  background-color: #D989AE;
+  margin: 0 auto 20px;
+  display: block;
   text-align: center;
 }
 
