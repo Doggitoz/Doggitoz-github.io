@@ -1,0 +1,298 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2A2A2A;
+  color: #E0E0E0;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #E0E0E0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #E0E0E0;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
+}
+
+h2 {
+  color: #D989AE;
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+}
+
+/* Wrapper */
+#wrapper>*>.inner {
+  width: 100%;
+  max-width: 68em;
+  margin: 0 auto;
+  padding: 0 2.5em;
+}
+
+@media screen and (max-width: 736px) {
+
+  #wrapper>*>.inner {
+    padding: 0 1.25em;
+  }
+
+}
+
+/* Projects ---------------------------------------------------------------------------------- */
+.projects {
+  margin-top: 20px;
+  width: 100%;
+  place-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 2.5em;
+  width: 90%;
+  align-items: center;
+}
+
+.grid-item {
+  background-color: #444444;
+  border: 5px solid #D989AE;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.2s;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.grid-item p {
+  margin-left: 2.5%;
+  text-align: left;
+  font-size: large;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: #E0E0E0;
+}
+
+.grid-item h2 {
+  text-decoration: none;
+  color: #D989AE;
+  text-align: left;
+  margin-left: 2.5%;
+}
+
+.image-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  /* Aspect ratio 4:3 (can be adjusted) */
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  /* Slight scaling effect on hover */
+}
+/* ------------------------------------------------------------------------------- */
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffcccb;
+  /* Match header and section */
+  position: relative;
+  /* Changed from absolute */
+  width: 100%;
+}
+
+/* Might eventually make this like a branch or smthn */
+.separator {
+  height: 2px;
+  background-color: rgb(107, 79, 79, 0.7);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Icons */
+.icon {
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+}
+
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+.icon>.label {
+  display: none;
+}
+
+.icon:before {
+  line-height: inherit;
+}
+
+.icon.solid:before {
+  font-weight: 900;
+}
+
+.icon.brands:before {
+  font-family: 'Font Awesome 5 Brands';
+}
+
+.icon.style2 {
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  background-color: transparent;
+  border: solid 1px #c9c9c9;
+  border-radius: 4px;
+  width: 2.65em;
+  height: 2.65em;
+  display: inline-block;
+  text-align: center;
+  line-height: 2.65em;
+  color: inherit;
+}
+
+.icon.style2:before {
+  font-size: 1.1em;
+}
+
+.icon.style2:hover {
+  color: #f2849e;
+  border-color: #f2849e;
+}
+
+.icon.style2:active {
+  background-color: rgba(242, 132, 158, 0.1);
+}
+
+ul.icons {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+ul.icons li {
+  display: inline-block;
+  padding: 1em;
+}
+
+
+
+/* Cherry Blossom Section */
+.cherry-blossom-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('images/sakura_branch.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.sakura-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.image {
+  position: absolute;
+  width: 110%;
+  height: 560%; /* Adjust as needed */
+  background-repeat: no-repeat;
+  background-size: cover; /* or 'cover' depending on the effect you want */
+  background-position: center;
+  transition: transform 0.2s ease-out, filter 0.2s ease-out;
+}
+
+.top-petals {
+  top: 0;
+  background-image: url('images/sakura_petals_top.png');
+}
+
+.bottom-petals {
+  bottom: 0;
+  background-image: url('images/sakura_petals_bottom.png');
+}
+
+.intro-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.5s ease-in-out;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro-text h2 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.intro-text p {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Functionality */
+
+/* https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
